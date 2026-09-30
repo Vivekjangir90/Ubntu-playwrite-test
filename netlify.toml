@@ -1,2 +1,5 @@
+[build]
+  command = "npx playwright install chromium"
+
 [functions]
-directory = "netlify/functions"
+  directory = "netlify/functions"
