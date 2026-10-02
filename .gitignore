@@ -4,5 +4,6 @@ __pycache__/
 .env
 .env.*
 !.env.example
+.env.example
 vcloud_source.html
 vcloud_after_click.html

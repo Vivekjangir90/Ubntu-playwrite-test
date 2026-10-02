@@ -1,5 +1,30 @@
 [build]
-  command = "npx playwright install chromium"
+  publish = "public"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "18"
 
 [functions]
-  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Route /api/tmdb/* directly to the tmdb serverless function
+[[redirects]]
+  from = "/api/tmdb/*"
+  to = "/.netlify/functions/tmdb/:splat"
+  status = 200
+  force = true
+
+# Route root requests to index.html
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+# CORS Headers for Android APK & Web App
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, Authorization, Accept, User-Agent"

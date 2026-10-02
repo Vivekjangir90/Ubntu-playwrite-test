@@ -1,8 +1,16 @@
 {
-  "name": "ubuntu-playwright-test",
-  "private": true,
-  "type": "module",
+  "name": "movie-nestle-api",
+  "version": "1.0.0",
+  "description": "Secure TMDB API Relay Backend for Movies Nestle 2.0 on Netlify",
+  "main": "netlify/functions/tmdb.js",
+  "scripts": {
+    "start": "netlify dev",
+    "build": "echo 'Build complete'"
+  },
+  "keywords": ["tmdb", "api-relay", "movie-nestle", "netlify-functions"],
+  "author": "Movies Nestle",
+  "license": "ISC",
   "dependencies": {
-    "playwright": "^1.56.0"
+    "axios": "^1.7.9"
   }
 }

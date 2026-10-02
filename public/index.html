@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Nestle 2.0 API Relay</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0a0f;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card {
+      background: #14141e;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 540px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    .badge {
+      display: inline-block;
+      background: #10b981;
+      color: #000;
+      font-weight: bold;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 24px;
+      margin: 0 0 8px 0;
+      color: #e5a93c;
+    }
+    p {
+      color: #9ca3af;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    code {
+      background: rgba(255,255,255,0.08);
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: #facc15;
+    }
+    .endpoint {
+      background: #0a0a0f;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      padding: 12px;
+      font-family: monospace;
+      font-size: 13px;
+      color: #38bdf8;
+      word-break: break-all;
+      margin: 16px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <span class="badge">Operational</span>
+    <h1>Movie Nestle API Relay</h1>
+    <p>Secure intermediary backend service for <strong>Movies Nestle 2.0</strong> Android APK and Web clients.</p>
+    <div class="endpoint">
+      GET /api/tmdb/trending/all/day
+    </div>
+    <p>Relays TMDB queries securely without exposing the <code>TMDB_API_KEY</code> to mobile clients.</p>
+  </div>
+</body>
+</html>
